@@ -1,0 +1,40 @@
+import MySQLdb db
+
+
+MySQLdb PACKAGE CONTENTS
+connections
+constants (package)
+converters
+cursors
+release
+times
+
+
+db.cursor()
+db.commit()
+db.rollback()
+
+
+
+1. help(mdb.connect)
+Help on function Connect in module MySQLdb:
+Connect(*args, **kwargs)
+Factory function for connections.Connection.
+
+
+
+2. help(mdb.cursors)
+Module MySQLdb.cursors in MySQLdb:
+/usr/lib64/python2.6/site-packages/MySQLdb/cursors.py
+
+cursor.description()
+cursor.execute(sqlQuery)
+cursor.executemany(sqlQuery)
+cursor.fetchone()
+cursor.fetchmany()
+cursor.fetchall()
+cursor.close()
+
+
+db.constants
+db.times

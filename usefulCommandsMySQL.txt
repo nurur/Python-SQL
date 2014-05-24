@@ -1,0 +1,37 @@
+MySQL:
+service mysqld restart 
+
+mysql -u root -p
+mysql -h localhost -u nurur -p TESTDB
+chown -R /var/lib/mysql/TESTDB/
+
+/etc/my.cnf
+changed user=mysql to user=nurur
+
+
+
+
+
+Login to MySQL:
+nurur> mysql TESTDB
+nurur> mysql -h localhost -u nurur -p TESTDB
+
+Create a database:
+mysql> CREATE DATABASE TESTDB;
+
+Create database users:
+mysql> CREATE USER 'testuser'@'localhost' IDENTIFIED BY 'test123';
+mysql> CREATE USER 'nurur'@'localhost' IDENTIFIED BY 'passwd';
+
+Listing the name of the users in MySQL:
+mysql> SELECT User,Host from mysql.user;
+
+
+mysql> GRANT ALL ON TESTDB.* TO 'testuser'@'localhost';
+mysql> GRANT ALL ON TESTDB.* TO 'testuser'@'localhost' IDENTIFIED BY 'test123';
+mysql> GRANT ALL ON TESTDB.* TO 'nurur'@'localhost';
+mysql> GRANT ALL ON TESTDB.* TO 'nurur'@'localhost' IDENTIFIED BY 'passwd';
+
+
+mysql> USE TESTDB;
+mysql> quit;
